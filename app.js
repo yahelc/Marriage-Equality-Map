@@ -1,53 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Interactive Marriage Equality Map</title>   
-<style>
-#legend p {display: block; font-size: 2em; font-weight: bold; font-family: Helvetica, sans-serif;}	
-#legend { float:right;  max-width: 650px;}
-body { width: 1600px; font-family: Helvetica, sans-serif;}
+jQuery.fn.convertToPercentString = function(people){return this.text((100*(people/totalPopulation)).toFixed(2)+"%")};
 
-</style>
-<script>
-window.location="http://www.marriageequalitymap.org/" + location.search;
-</script>
-</head>
-<body>
-  
-<div id="container">
-  <div id="legend">
-	<h2 id="hypothetical" style="display:none;"></h2>
-	
-	<h2>Percent of Americans who<span class="hypothetical-text" style="display:none;"> would</span> live in a state that has...</h2>
-	<p id="equality" style="color: #21799C;">Marriage Equality: <span></span></p>
-	<p id="partial" style="color: lightblue;">Partial Protections:  <span></span></p>
-	<p id="law" style="color: #FC5B5B;">Legislative Ban:  <span></span></p>
-	<p id="ban" style="color: darkred;">Constitutional Ban:  <span></span></p>
-	
-	<h2>Click states to toggle hypothetical scenarios.</h2>
-	</div>
-	
-	</div>
-	<a href="#" id="permalink">Permalink</a>
-	| 
-	<a href="?">Clear Changes</a>
-	
-	<p>Credits:
-		<li>Built in spare time by <a href="https://twitter.com/yahelc" class="twitter-follow-button" data-show-count="false">Follow @yahelc</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-		<li>Marriage Equality data from <a href="http://www.freedomtomarry.org/states/">Freedom to Marry</a></li>
-		<li>Population data via <a href="http://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population">Wikipedia</a></li>
-		<li>Code based on <a href="https://github.com/robflaherty/us-map-raphael">us-map-raphael</a></li>
-		
-		<p>
-	<!-- /container -->
-<script src="raphael-min.js"></script>
-<script src="us-map-svg.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-<script>
-jQuery.fn.convertToPercentString = function(people){return this.text(parseInt(100*(people/totalPopulation).toFixed(2),10)+"%")}
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", "vt", "ri", "de"];
 var constitutionallyBanned = ["mt", "id", "ut", "az", "ak", "nd", "sd", "ne", "ks", "ok", "tx", "la", "ar", "mo", "mi", "oh", "ky", "tn", "ms", "al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "ca", "or", "wi", "nv"];
 var legislativelyBanned = ["wy", "nm", "mn", "in", "wv", "pa"];
@@ -55,7 +7,7 @@ var protections = ["il", "nj"];
 var colors = {"gay":"#21799C", "banned": "darkred", "law": "#FC5B5B", "partial": "lightblue"};
 
 var population = {al:4822023, ak:731449, az:6553255, ar:2949131, ca:38041430, co:5187582, ct:3590347, de:917092, dc:632323, fl:19317568, ga:9919945, hi:1392313, id:1595728, il:12875255, "in":6537334, ia:3074186, ks:2885905, ky:4380415, la:4601893, me:1329192, md:5884563, ma:6646144, mi:9883360, mn:5379139, ms:2984926, mo:6021988, mt:1005141, ne:1855525, nv:2758931, nh:1320718, nj:8864590, nm:2085538, ny:19570261, nc:9752073, nd:699628, oh:11544225, ok:3814820, or:3899353, pa:12763536, ri:1050292, sc:4723723, sd:833354, tn:6456243, tx:26059203, ut:2855287, vt:626011, va:8185867, wa:6897012, wv:1855413, wi:5726398, wy:576412};
-var totalPopulation = 308745538;
+var totalPopulation = 313914040;
 
 function recalculateNational(){
 	var data = {equality:{states:0,people:0}, ban:{states:0,people:0}, law:{states:0,people:0}, partial:{states:0,people:0}}
@@ -173,6 +125,13 @@ try{
 }
 catch(e){}
   };
-</script>
-</body>
-</html>
+
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40718670-1', 'marriageequalitymap.org');
+  ga('send', 'pageview');
