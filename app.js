@@ -103,7 +103,10 @@ function marriageToggle(status){
 			history.replaceState({},"",$("#permalink").attr("href"));
 			
 			if(location.search.length>1){
-				$("#hypothetical").html("Hypothetically, if " + click_queue.join(", ").toUpperCase() + " got marriage equality...").add(".hypothetical-text").show();
+				var states_string = click_queue.join(", ").toUpperCase();
+				states_string = states_string.slice(0, -3) + " and" + states_string.slice(-3 )
+				
+				$("#hypothetical").html("Hypothetically, if " + states_string + " got marriage equality...").add(".hypothetical-text").show();
 			}
 			else{
 				$("#hypothetical, .hypothetical-text").hide();
