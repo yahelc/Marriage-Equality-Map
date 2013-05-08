@@ -104,7 +104,9 @@ function marriageToggle(status){
 			
 			if(location.search.length>1){
 				var states_string = click_queue.join(", ").toUpperCase();
-				states_string = states_string.slice(0, -3) + " and" + states_string.slice(-3 )
+				if(click_queue.length>1){
+					states_string = states_string.slice(0, -3) + " and" + states_string.slice(-3 );
+				}
 				
 				$("#hypothetical").html("Hypothetically, if " + states_string + " got marriage equality...").add(".hypothetical-text").show();
 			}
