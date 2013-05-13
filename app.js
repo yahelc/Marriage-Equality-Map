@@ -1,8 +1,8 @@
 jQuery.fn.convertToPercentString = function(people){return this.text((100*(people/totalPopulation)).toFixed(2)+"%")};
 
-var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", "vt", "ri", "de"];
+var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", "vt", "ri", "de", "mn"];
 var constitutionallyBanned = ["mt", "id", "ut", "az", "ak", "nd", "sd", "ne", "ks", "ok", "tx", "la", "ar", "mo", "mi", "oh", "ky", "tn", "ms", "al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "ca", "or", "wi", "nv"];
-var legislativelyBanned = ["wy", "nm", "mn", "in", "wv", "pa"];
+var legislativelyBanned = ["wy", "nm", "in", "wv", "pa"];
 var protections = ["il", "nj"];
 var colors = {"gay":"#21799C", "banned": "darkred", "law": "#FC5B5B", "partial": "lightblue"};
 
