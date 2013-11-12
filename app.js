@@ -3,13 +3,13 @@ jQuery.fn.convertToPercentString = function(people){
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
-	"vt", "ri", "de", "mn", "ca", "nj", "il"];
+	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi"];
 var constitutionallyBanned = ["mt", "id", "ut", "az", "ak", "nd", "sd", 
 "ne", "ks", "ok", "tx", "la", "ar", "mo", "mi", "oh", "ky", "tn", "ms", 
 "al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "or", "wi", "nv"];
-var legislativelyBanned = ["wy", "nm", "in", "wv", "pa"];
-var protections = [];
-var colors = {"equality":"#21799C", "ban": "darkred", "law": "#FC5B5B", "partial": "lightblue"};
+var legislativelyBanned = ["wy", "in", "wv", "pa"];
+var protections = ["nm"];
+var colors = {"equality":"#21799C", "ban": "darkred", "law": "#FC5B5B", "partial": "#FCB160"};
 
 var population = {al:4822023, ak:731449, az:6553255, ar:2949131, ca:38041430, 
 	co:5187582, ct:3590347, de:917092, dc:632323, fl:19317568, ga:9919945, 
