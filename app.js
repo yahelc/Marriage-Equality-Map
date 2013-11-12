@@ -1,5 +1,8 @@
 jQuery.fn.convertToPercentString = function(data) {
-	return this.text((100 * (data.people / totalPopulation)).toFixed(2) + "% (" + data.states + " states)");
+	if($(this).parent().attr("id") === "equality"){ //ugh DC
+		return this.html((100 * (data.people / totalPopulation)).toFixed(2) + "% <br><small>(" + (data.states-1) + " states + DC</small>)");
+	}
+	return this.html((100 * (data.people / totalPopulation)).toFixed(2) + "% <br><small>(" + data.states + " state" +(data.states!=1?"s":"") +"</small>)");
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
