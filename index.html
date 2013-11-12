@@ -4,16 +4,17 @@
   <meta charset="utf-8" />
   <title>Interactive Marriage Equality Map</title>   
 <style>
-#legend p {display: block; font-size: 2em; font-weight: bold; font-family: Helvetica, sans-serif;}	
-#legend { float:right;  max-width: 650px;}
-body { width: 1600px; font-family: Helvetica, sans-serif;}
-
+#legend p {display: block; font-size: 1.5em; font-weight: bold; font-family: Helvetica, sans-serif;}	
+#legend { float:right;  max-width: 450px;}
+body { width: 1400px; font-family: Helvetica, sans-serif;}
+#mapcontainer{float:left;}
 </style>
 
 </head>
 <body>
   
 <div id="container">
+	<div id="mapcontainer"></div>
   <div id="legend">
 	<h2 id="hypothetical" style="display:none;"></h2>
 	
@@ -27,6 +28,7 @@ body { width: 1600px; font-family: Helvetica, sans-serif;}
 	</div>
 	
 	</div>
+	<div style="clear:both;"></div>
 	<a href="#" id="permalink">Permalink</a>
 	| 
 	<a href="?">Clear Changes</a>
@@ -41,9 +43,9 @@ body { width: 1600px; font-family: Helvetica, sans-serif;}
 		
 		<p>
 	<!-- /container -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/1.5.2/raphael-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/1.5.2/raphael-min.js"></script>
 <script src="us-map-svg.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <script src="app.js"></script>
 </body>
