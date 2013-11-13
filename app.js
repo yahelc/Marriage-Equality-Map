@@ -1,8 +1,18 @@
+Number.prototype._round = function() {
+  return Math.round(this);
+}
+
+
 jQuery.fn.convertToPercentString = function(data) {
-	if($(this).parent().attr("id") === "equality"){ //ugh DC
-		return this.html((100 * (data.people / totalPopulation)).toFixed(2) + "% <br><small>(" + (data.states-1) + " states + DC</small>)");
-	}
-	return this.html((100 * (data.people / totalPopulation)).toFixed(2) + "% <br><small>(" + data.states + " state" +(data.states!=1?"s":"") +"</small>)");
+	var str = "<br><small>" + (100 * (data.people / totalPopulation)).toFixed(2) + "% of Americans</small>"
+	
+	str += "<br><small>" + ((data.people/1E3)._round()/1E3).toFixed(2) + " million people</small><br><small>" ; 
+	str += $(this).parent().attr("id") === "equality" ? 
+	 	(data.states-1) + " states & DC" : 
+		data.states + " state" + (data.states!=1?"s":"");
+	str += "</small>"
+	
+	return this.html(str);
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
@@ -144,9 +154,11 @@ window.onload = function() {
 						states_string = states_string.slice(0, -3) + " and" + states_string.slice(-3);
 					}
 
-					$("#hypothetical").html("Hypothetically, if " + states_string + " got marriage equality...").add(".hypothetical-text").show();
+					$("#hypothetical").html("If marriage equality was legalized in " + states_string + "...").add(".hypothetical-text").show();
+					$("#currentstatus-header").hide();
 				} else {
 					$("#hypothetical, .hypothetical-text").hide();
+					$("#currentstatus-header").show();
 				}
 
 				recalculateNational();
