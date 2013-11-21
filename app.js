@@ -136,6 +136,10 @@ window.onload = function() {
 					fill: color
 				},
 				300);
+				
+				if(hasEquality.indexOf(st.state) >= 0){
+					return;
+				}
 
 				var index = click_queue.indexOf(st.state);
 
