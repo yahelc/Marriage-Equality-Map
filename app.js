@@ -16,7 +16,7 @@ jQuery.fn.convertToPercentString = function(data) {
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
-	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm"];
+	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "ut"];
 var constitutionallyBanned = ["mt", "id", "az", "ak", "nd", "sd", 
 "ne", "ks", "ok", "tx", "la", "ar", "mo", "mi", "oh", "ky", "tn", "ms", 
 "al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "or", "wi", "nv"];
