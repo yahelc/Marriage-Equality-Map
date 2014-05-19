@@ -16,10 +16,10 @@ jQuery.fn.convertToPercentString = function(data) {
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
-	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm"];
+	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "or"];
 var constitutionallyBanned = ["mt", "id", "ut", "az", "ak", "nd", "sd", 
 "ne", "ks", "ok", "tx", "la", "ar", "mo", "mi", "oh", "ky", "tn", "ms", 
-"al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "or", "wi", "nv"];
+"al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "wi", "nv"];
 var legislativelyBanned = ["wy", "in", "wv", "pa"];
 var colors = {"equality":"#21799C", "ban": "darkred", "law": "#FC5B5B"};
 
