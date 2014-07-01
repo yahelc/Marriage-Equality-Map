@@ -16,11 +16,11 @@ jQuery.fn.convertToPercentString = function(data) {
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
-	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "or", "pa", "in"];
+	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "or", "pa"];
 var constitutionallyBanned = ["mt", "id", "ut", "az", "ak", "nd", "sd", 
 "ne", "ks", "ok", "tx", "la", "ar", "mo", "mi", "oh", "ky", "tn", "ms", 
 "al", "tn", "ga",  "fl", "sc", "nc", "va", "co", "wi", "nv"];
-var legislativelyBanned = ["wy", "wv"];
+var legislativelyBanned = ["wy", "wv", "in"];
 var colors = {"equality":"#21799C", "ban": "darkred", "law": "#FC5B5B"};
 
 var population = {al:4822023, ak:731449, az:6553255, ar:2949131, ca:38041430, 
