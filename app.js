@@ -16,11 +16,10 @@ jQuery.fn.convertToPercentString = function(data) {
 };
 
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
-	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "or", "pa", "in", "va", "wi", "ut","ok", "wv", "nv", "id", "nc","ak","az","co"];
+	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "or", "pa", "in", "va", "wi", "ut","ok", "wv", "nv", "id", "nc","ak","az","co", "wy"];
 var constitutionallyBanned = ["mt",  "nd", "sd", "ar", "ne", "ks",  "tx", "la", "mo", "mi", "oh", "ky", "tn", "ms", 
 "al", "tn", "ga",  "fl", "sc"];
-var legislativelyBanned = ["wy"];
-var colors = {"equality":"#21799C", "ban": "darkred", "law": "#FC5B5B"};
+var colors = {"equality":"#21799C", "ban": "darkred"};
 
 var population = {al:4822023, ak:731449, az:6553255, ar:2949131, ca:38041430, 
 	co:5187582, ct:3590347, de:917092, dc:632323, fl:19317568, ga:9919945, 
@@ -46,10 +45,6 @@ function recalculateNational() {
 			states: 0,
 			people: 0
 		},
-		law: {
-			states: 0,
-			people: 0
-		}
 	};
 	for (var state in usMap) {
 		var statusObj = data[usRaphael[state].marriage];
@@ -59,7 +54,6 @@ function recalculateNational() {
 	}
 	jQuery("#equality span").convertToPercentString(data.equality);
 	jQuery("#ban span").convertToPercentString(data.ban);
-	jQuery("#law span").convertToPercentString(data.law);
 }
 
 
@@ -90,9 +84,7 @@ window.onload = function() {
 			status = "equality";
 		} else if (constitutionallyBanned.indexOf(state) > -1) {
 			status = "ban";
-		} else if (legislativelyBanned.indexOf(state) > -1) {
-			status = "law";
-		} 
+		}
 		var raphaelState = usRaphael[state];
 		raphaelState.color = raphaelState.originalColor = colors[status];
 		raphaelState.marriage = raphaelState.originalMarriage = status;
