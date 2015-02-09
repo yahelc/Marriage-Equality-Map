@@ -18,9 +18,9 @@ jQuery.fn.convertToPercentString = function(data) {
 var hasEquality = ["ny", "ia", "wa", "me", "nh", "ma", "ct", "md", "dc", 
 	"vt", "ri", "de", "mn", "ca", "nj", "il", "hi", "nm", "or", "pa",
 	"in", "va", "wi", "ut","ok", "wv", "nv", "id", "nc","ak","az","co",
-	"wy","ks", "fl",  "sc"];
+	"wy","ks", "fl",  "sc", "al"];
 var constitutionallyBanned = ["mt",  "nd", "sd", "ar", "ne", "tx", "la", "mo", "mi", "oh", "ky", "tn", "ms", 
-"al", "tn", "ga"];
+ "tn", "ga"];
 var colors = {"equality":"#21799C", "ban": "darkred"};
 
 var population = {al:4822023, ak:731449, az:6553255, ar:2949131, ca:38041430, 
